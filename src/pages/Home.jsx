@@ -1,5 +1,7 @@
 // src/pages/Home.jsx
 import { Link } from 'react-router-dom';
+
+// Componente Home que muestra una bienvenida y un enlace al catálogo
 const Home = () => {
   return (
     <div className="container mt-5">

@@ -1,39 +1,42 @@
 import { useState } from 'react';
-import { productos } from '../data/productos'; // Importamos tu nuevo archivo de datos
 import ProductCard from '../components/ProductCard';
 import ProductModal from '../components/ProductModal';
 
-const Catalogo = () => {
+// Componente Catalogo que muestra los productos filtrados y permite agregar al carrito
+const Catalogo = ({ productosFiltrados, agregarAlCarrito }) => {
+
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
 
+// abrir el modal con los detalles del producto seleccionado
   const handleOpenModal = (producto) => {
     setProductoSeleccionado(producto);
   };
 
+  //cerrar el modal
   const handleCloseModal = () => {
     setProductoSeleccionado(null);
   };
-
+// Renderiza el catálogo de productos y el modal si hay un producto seleccionado
   return (
     <div className="container mt-5">
       <h2 className="mb-4">Catálogo de Indumentaria</h2>
+
       <div className="row">
-        {/* Usamos el array 'productos' directamente */}
-        {productos.map((producto) => (
+        {productosFiltrados.map((producto) => (
           <div key={producto.id} className="col-md-4 mb-4">
-            <ProductCard 
-              producto={producto} 
-              onOpenModal={handleOpenModal} 
+            <ProductCard
+              producto={producto}
+              onOpenModal={handleOpenModal}
             />
           </div>
         ))}
       </div>
-
-      {/* Modal para mostrar detalles del producto */}
+{/* Si hay un producto seleccionado, muestra el modal con sus detalles */}
       {productoSeleccionado && (
         <ProductModal
           producto={productoSeleccionado}
           onClose={handleCloseModal}
+          onAgregar={agregarAlCarrito}
         />
       )}
     </div>

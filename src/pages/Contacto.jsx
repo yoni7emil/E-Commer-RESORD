@@ -1,33 +1,44 @@
 import { useState } from 'react';
-
+// Componente de contacto para compras al por mayor
 const Contacto = () => {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
     whatsapp: '',
-    talle: '',
-    localidad: '',
-    cantidad: ''
+    direccion: ''
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleWhatsApp = (e) => {
     e.preventDefault();
-    console.log("Datos del pedido:", formData);
-    alert("Pedido enviado correctamente");
-    // Reset del formulario
-    setFormData({ nombre: '', email: '', whatsapp: '', talle: '', localidad: '', cantidad: '' });
+
+    // NÚMERO DE WHATSAPP (con código de país, sin el + ni guiones)
+    const telefonoVendedor = '5493764882325'; // Reemplaza con tu número de WhatsApp
+
+    const mensaje = `Hola, mi nombre es ${formData.nombre}. 
+    Quisiera realizar una compra al por mayor. 
+    Datos de contacto:
+    - Email: ${formData.email}
+    - WhatsApp: ${formData.whatsapp}
+    - Dirección: ${formData.direccion}`;
+
+    // Codificamos el mensaje para que funcione en una URL
+    const urlWhatsApp = `https://wa.me/${telefonoVendedor}?text=${encodeURIComponent(mensaje)}`;
+
+    // Redirección a WhatsApp
+    window.open(urlWhatsApp, '_blank');
   };
 
+  // Renderizamos el formulario de contacto
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Hacer Pedido</h2>
-      <form onSubmit={handleSubmit} className="mt-4">
+      <h2 className="mb-4">Solicitud de Compra Mayorista</h2>
+      <form onSubmit={handleWhatsApp} className="mt-4">
         <div className="mb-3">
-          <label>Nombre</label>
+          <label>Nombre Completo</label>
           <input name="nombre" className="form-control" value={formData.nombre} onChange={handleChange} required />
         </div>
         <div className="mb-3">
@@ -36,29 +47,15 @@ const Contacto = () => {
         </div>
         <div className="mb-3">
           <label>WhatsApp</label>
-          <input type="tel" name="whatsapp" className="form-control" value={formData.whatsapp} onChange={handleChange} />
+          <input type="tel" name="whatsapp" className="form-control" value={formData.whatsapp} onChange={handleChange} required />
         </div>
         <div className="mb-3">
-          <label>Talle</label>
-          <select name="talle" className="form-control" value={formData.talle} onChange={handleChange}>
-            <option value="">Seleccione...</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </div>
-        <div className="mb-3">
-          <label>Localidad</label>
-          <input name="localidad" className="form-control" value={formData.localidad} onChange={handleChange} />
-        </div>
-        <div className="mb-3">
-          <label>Cantidad</label>
-          <input type="number" name="cantidad" className="form-control" value={formData.cantidad} onChange={handleChange} />
+          <label>Dirección</label>
+          <input name="direccion" className="form-control" value={formData.direccion} onChange={handleChange} required />
         </div>
         
-        <button type="submit" className="btn btn-success">
-          Enviar Pedido
+        <button type="submit" className="btn btn-success btn-lg">
+          Continuar en WhatsApp
         </button>
       </form>
     </div>
