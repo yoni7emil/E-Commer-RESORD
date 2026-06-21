@@ -1,0 +1,17 @@
+:root {
+  /* Paleta Gótica Minimalista */
+  --bg-color: #FFFFFF;
+  --text-h: #1A1A1A;     /* Negro Profundo para títulos */
+  --text: #444444;       /* Gris oscuro para texto fluido */
+  --accent-violet: #4B0082;
+  --accent-red: #8B0000;
+
+  /* Colores de Botones */
+  --btn-red: #D32F2F;
+  --btn-green: #2E7D32;
+  --btn-gray: #616161;
+  --btn-blue: #1976D2;
+
+  /* Tipografía */
+  --font-serif: 'Georgia', serif;
+}

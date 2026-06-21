@@ -1,0 +1,61 @@
+/* src/pages/Carrito/Carrito.css */
+.carrito-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.carrito-title {
+  border-bottom: 2px solid var(--text-h);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--text);
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.item-image { width: 100px; height: 100px; object-fit: cover; }
+
+.qty-btn {
+  background: none;
+  border: 1px solid var(--text);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--text);
+  background: transparent;
+}
+
+.checkout-btn {
+  background: var(--btn-green);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+
+.total-container {
+  margin-top: 30px;
+  text-align: right;
+}

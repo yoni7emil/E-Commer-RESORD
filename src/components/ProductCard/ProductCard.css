@@ -1,0 +1,61 @@
+/* src/components/ProductCard/ProductCard.css */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--text-h); /* Borde negro gótico */
+  padding: 15px;
+  background-color: var(--bg-color);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  border-color: var(--accent-violet); /* Violeta al pasar el mouse */
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: grayscale(20%); /* Toque minimalista un poco desaturado */
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+  color: var(--text-h);
+}
+
+.talle-btn {
+  background: none;
+  border: 1px solid var(--text);
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.talle-btn.active {
+  background-color: var(--text-h);
+  color: white;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.detail-btn {
+  background-color: var(--accent-red); /* Rojo sangre */
+  color: white;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.detail-btn:hover {
+  opacity: 0.9;
+}

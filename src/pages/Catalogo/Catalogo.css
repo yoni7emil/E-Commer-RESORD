@@ -1,0 +1,26 @@
+/* src/pages/Catalogo/Catalogo.css */
+.catalogo-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalogo-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-h);
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 1px solid var(--text-h);
+  padding-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  /* Esto crea columnas que se ajustan automáticamente */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px; /* Gran espacio en blanco, muy minimalista */
+  justify-items: center;
+}

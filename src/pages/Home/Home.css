@@ -1,0 +1,58 @@
+/* src/pages/Home/Home.css */
+.home-container {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* El logo de fondo, sutil y grande */
+.background-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; /* Ajusta el tamaño */
+  opacity: 0.05; /* Muy sutil para que sea minimalista */
+  pointer-events: none; /* Para que no moleste al hacer clic */
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--accent-red); /* Rojo sangre */
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid var(--accent-red);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: transparent;
+  color: var(--accent-red);
+}

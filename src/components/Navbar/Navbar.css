@@ -1,0 +1,43 @@
+/* src/components/Navbar/Navbar.css */
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--text-h); /* Borde negro gótico */
+  background-color: var(--bg-color);
+}
+
+.navbar-logo {
+  height: 60px; /* Ajusta según el tamaño de tu logo */
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-h);
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-violet); /* Violeta al pasar el mouse */
+}
+
+.search-bar {
+  border: 1px solid var(--text);
+  padding: 8px;
+  background: transparent;
+  color: var(--text-h);
+}
+
+.cart-link {
+  color: var(--accent-red) !important; /* Rojo sangre para el carrito */
+}
