@@ -16,7 +16,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%; /* Ajusta el tamaño */
-  opacity: 0.05; /* Muy sutil para que sea minimalista */
+  opacity: 0.05; /* minimalista */
   pointer-events: none; /* Para que no moleste al hacer clic */
   z-index: 0;
 }

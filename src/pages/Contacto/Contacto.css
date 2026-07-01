@@ -1,6 +1,6 @@
 /* src/pages/Contacto/Contacto.css */
 .contacto-container {
-  max-width: 500px; /* Estrecho para un look más editorial */
+  max-width: 500px; 
   margin: 60px auto;
   padding: 40px;
   border: 1px solid var(--text-h);

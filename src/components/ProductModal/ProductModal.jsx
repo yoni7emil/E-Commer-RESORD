@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ProductModal.css';
 
+// En este componente, se recibe el producto, la función onClose y la función onAgregar como props.
 const ProductModal = ({ producto, onClose, onAgregar }) => {
   const [talleSeleccionado, setTalleSeleccionado] = useState(producto.talleSeleccionado);
   
@@ -11,6 +12,7 @@ const ProductModal = ({ producto, onClose, onAgregar }) => {
     onClose();
   };
 
+// Aquí se define la estructura del modal, incluyendo la imagen del producto, los detalles, el selector de talles y el botón para agregar al carrito.
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-container" onClick={e => e.stopPropagation()}>

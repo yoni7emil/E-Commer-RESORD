@@ -1,4 +1,5 @@
 /* src/components/Navbar/Navbar.css */
+
 .navbar-custom {
   display: flex;
   justify-content: space-between;
@@ -9,7 +10,7 @@
 }
 
 .navbar-logo {
-  height: 60px; /* Ajusta según el tamaño de tu logo */
+  height: 60px; /* Altura del logo */
   width: auto;
 }
 

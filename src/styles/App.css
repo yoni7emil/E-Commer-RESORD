@@ -1,4 +1,16 @@
-/* .counter {
+/* 
+
+CSS de la aplicacion antes del cambio a la estructura de carpetas con CSS locales 
+
+este archivo contiene los estilos globales de la aplicación, incluyendo variables CSS, estilos para el contador, la sección hero, enlaces de navegación, y otros elementos de la interfaz. Se utilizan variables CSS para mantener la consistencia de colores y estilos en toda la aplicación.
+
+ESOTO lo dejo como ejemplo de como se puede organizar el CSS en un proyecto React, aunque en la práctica es recomendable utilizar CSS Modules o Styled Components para evitar conflictos de nombres y mejorar la mantenibilidad del código.
+
+
+
+
+
+.counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;

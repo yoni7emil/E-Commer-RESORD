@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Contacto.css';
-
+// En este componente, se maneja un formulario para que los usuarios puedan solicitar compras al por mayor. 
 const Contacto = () => {
   const [formData, setFormData] = useState({
     nombre: '', email: '', whatsapp: '', direccion: ''
@@ -12,11 +12,11 @@ const Contacto = () => {
 
   const handleWhatsApp = (e) => {
     e.preventDefault();
-    const telefonoVendedor = '5493764882325';
+    const telefonoVendedor = '5493764882325';{/* Número de WhatsApp del vendedor */}
     const mensaje = `Hola, mi nombre es ${formData.nombre}. Quisiera realizar una compra al por mayor. Datos de contacto:\n- Email: ${formData.email}\n- WhatsApp: ${formData.whatsapp}\n- Dirección: ${formData.direccion}`;
     window.open(`https://wa.me/${telefonoVendedor}?text=${encodeURIComponent(mensaje)}`, '_blank');
   };
-
+// Formulario de contacto.
   return (
     <div className="contacto-container">
       <h2 className="contacto-title">Solicitud Mayorista</h2>
