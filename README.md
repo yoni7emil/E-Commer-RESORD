@@ -109,3 +109,6 @@ Hola, soy desarrollador de software con conocimientos de base de datos, sigo en 
 ## IMPORTANTE 
 
 Este proyecto lo desarroye para aprender, desarrollar mis abilidades logicas y de despliegue no hay contenido real de la tienda online real en este proyecto que presento como trabajo final del curso  de Programador Web Inicial - FONT END DEVELOPER 
+
+
+## El proxim enlace los lleva a la tienda 
