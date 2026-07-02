@@ -15,8 +15,8 @@ function App() {
   const [carrito, setCarrito] = useState([]);
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
 
-// 2. Aquí hacemos el filtro directamente. 
-  // ¡Eliminamos la declaración duplicada de arriba!
+//  filtro directamente. 
+
 const productosFiltrados = productos.filter(p => 
   p.nombre.toLowerCase().includes(terminoBusqueda.toLowerCase())
 );
