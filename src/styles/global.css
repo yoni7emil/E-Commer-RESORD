@@ -1,5 +1,5 @@
 @import './variables.css';
-
+/* A pedido de mi cliente el estilo del css minimalista con colores goticos */
 body {
   margin: 0;
   background-color: var(--bg-color);
