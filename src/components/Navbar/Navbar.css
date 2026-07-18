@@ -1,44 +1,79 @@
-/* src/components/Navbar/Navbar.css */
-
+/* Configuración principal del Navbar */
 .navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* Definimos una altura fija para facilitar el padding del body */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 2px solid var(--text-h); /* Borde negro gótico */
-  background-color: var(--bg-color);
+  padding: 0 3rem;
+  background-color: rgba(0, 0, 0, 0.95); /* Blanco casi opaco */
+  border-bottom: 2px solid var(--text-h);
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Efecto cristal */
 }
 
-.navbar-logo {
-  height: 60px; /* Altura del logo */
-  width: auto;
-}
-
-.navbar-links {
+/* Secciones para el layout */
+.nav-section {
+  flex: 1;
   display: flex;
-  gap: 30px;
+  align-items: center;
 }
 
+.nav-section.left { justify-content: flex-start; }
+.nav-section.center { justify-content: center; order: 1; }
+.nav-section.right { justify-content: flex-end; gap: 25px; order: 3; }
+
+/* Logo */
+.navbar-logo {
+  height: 150px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Enlaces de navegación */
 .nav-link {
   text-decoration: none;
   color: var(--text-h);
   font-family: var(--font-serif);
+  font-weight: 600;
   text-transform: uppercase;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--accent-violet); /* Violeta al pasar el mouse */
+  color: var(--accent-violet);
 }
 
+/* Buscador */
 .search-bar {
+  background-color: transparent;
   border: 1px solid var(--text);
-  padding: 8px;
-  background: transparent;
   color: var(--text-h);
+  padding: 8px 12px;
+  border-radius: 2px;
+  outline: none;
+  transition: border 0.3s ease;
 }
 
-.cart-link {
-  color: var(--accent-red) !important; /* Rojo sangre para el carrito */
+.search-bar:focus {
+  border-color: var(--accent-violet);
+  width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-custom {
+    flex-wrap: wrap; /* Permite que el contenido pase a una segunda fila */
+    height: auto;    /* La altura se ajusta según el contenido */
+    padding: 10px;
+  }
 }

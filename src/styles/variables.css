@@ -1,9 +1,9 @@
 :root {
   /* Paleta Gótica Minimalista */
-  --bg-color: #FFFFFF;
-  --text-h: #1A1A1A;     /* Negro Profundo para títulos */
-  --text: #444444;       /* Gris oscuro para texto fluido */
-  --accent-violet: #4B0082;
+  --bg-color: #000000;
+  --text-h: #ffffff;     /* Negro Profundo para títulos */
+  --text: #5d5d5d;       /* Gris oscuro para texto fluido */
+  --accent-violet: #4c0082;
   --accent-red: #8B0000;
 
   /* Colores de Botones */

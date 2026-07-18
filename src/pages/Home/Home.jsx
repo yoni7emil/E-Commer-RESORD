@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logo from '../../assets/IMG_1359.PNG'; 
+import logo from '../../assets/IMG_1359-r.PNG'; 
 
 const Home = () => {
   return (
